@@ -3,6 +3,11 @@
 
 .boton-amarillo {
   // toma todo el espacio disponible
+  @include m.boton(v.$amarillo, inline-block);
+}
+
+.boton-amarillo-block {
+  // toma todo el espacio disponible
   @include m.boton(v.$amarillo, block);
 }
 
