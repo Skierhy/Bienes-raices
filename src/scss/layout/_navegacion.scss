@@ -1,33 +1,33 @@
 @use "base/variables" as v;
 @use "base/mixins" as m;
 .barra {
-  display: flex;
-  flex-direction: column;
-  padding-top: 3rem;
-  @include m.tablet {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+	display: flex;
+	flex-direction: column;
+	padding: 3rem 0 3rem 0;
+	@include m.tablet {
+		flex-direction: row;
+		justify-content: space-between;
+	}
 }
 
 .navegacion {
-  @include m.tablet {
-    display: flex;
-    align-items: center;
-  }
-  a {
-    color: v.$blanco;
-    text-decoration: none;
-    font-size: 1.8rem;
-    // ocupe todo la linea
-    display: block;
-    text-align: center;
-    @include m.tablet {
-      margin-right: 2rem;
-      //   eliminar el margen del ultimo elemento
-      &:last-of-type {
-        margin-right: 0;
-      }
-    }
-  }
+	@include m.tablet {
+		display: flex;
+		align-items: center;
+	}
+	a {
+		color: v.$blanco;
+		text-decoration: none;
+		font-size: 1.8rem;
+		// ocupe todo la linea
+		display: block;
+		text-align: center;
+		@include m.tablet {
+			margin-right: 2rem;
+			//   eliminar el margen del ultimo elemento
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
 }

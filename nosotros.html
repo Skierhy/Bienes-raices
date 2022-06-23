@@ -1,48 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bienes raíces</title>
-    <link rel="stylesheet" href="build/css/app.css" />
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bienes raíces</title>
+		<link rel="stylesheet" href="build/css/app.css" />
+	</head>
 
-  <body>
-    <header class="header">
-      <div class="contenedor contenido-header">
-        <div class="barra">
-          <!-- para referir a la pagina principal -->
-          <a href="/">
-            <img src="build/img/logo.svg" alt="Logotipo de Bienes raíces" />
-          </a>
-          <nav class="navegacion">
-            <a href="nosotros.html">Nosotros</a>
-            <a href="anuncios.html">Anuncios</a>
-            <a href="blog.html">Blog</a>
-            <a href="contacto.html">Contacto</a>
-          </nav>
-        </div>
-        <!-- .barra -->
-      </div>
-      <!-- .contenedor contenido -->
-    </header>
+	<body>
+		<header class="header">
+			<div class="contenedor contenido-header">
+				<div class="barra">
+					<!-- para referir a la pagina principal -->
+					<a href="/">
+						<img
+							src="build/img/logo.svg"
+							alt="Logotipo de Bienes raíces"
+						/>
+					</a>
+					<nav class="navegacion">
+						<a href="nosotros.html">Nosotros</a>
+						<a href="anuncios.html">Anuncios</a>
+						<a href="blog.html">Blog</a>
+						<a href="contacto.html">Contacto</a>
+					</nav>
+				</div>
+				<!-- .barra -->
+			</div>
+			<!-- .contenedor contenido -->
+		</header>
 
-    <main class="contenedor seccion">
-      <h1>Nosotros</h1>
-    </main>
+		<main class="contenedor seccion">
+			<h1>Conoce Sobre Nosotros</h1>
 
-    <footer class="footer seccion">
-      <div class="contenedor contenedor-footer">
-        <nav class="navegacion">
-          <a href="nosotros.html">Nosotros</a>
-          <a href="anuncios.html">Anuncios</a>
-          <a href="blog.html">Blog</a>
-          <a href="contacto.html">Contacto</a>
-        </nav>
-      </div>
-      <p class="copyright">Todos los derechos Reservados 2022 &copy;</p>
-    </footer>
-    <script src="build/js/bundle.min.js"></script>
-  </body>
+			<div class="nosotros contenedor seccion">
+				<picture>
+					<source src="build/img/nosotros.webp" type="image/webp" />
+					<source src="build/img/nosotros.jpg" type="image/jpeg" />
+					<img
+						loading="lazy"
+						src="build/img/nosotros.jpg"
+						alt="nosotros"
+					/>
+				</picture>
+				<div>
+					<blockquote>25 Años Nos Respalda</blockquote>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Voluptatem exercitationem perferendis, voluptates esse nisi
+						laudantium recusandae iusto non facere harum ipsum dignissimos
+						dolore temporibus ullam, nemo amet. Ab, provident blanditiis!
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Voluptatem exercitationem perferendis, voluptates esse nisi
+						laudantium recusandae iusto non facere harum ipsum dignissimos
+						dolore temporibus ullam, nemo amet. Ab, provident blanditiis!
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+						Voluptatem exercitationem perferendis, voluptates esse nisi
+						laudantium recusandae iusto non facere harum ipsum dignissimos
+						dolore temporibus ullam, nemo amet. Ab, provident blanditiis!
+					</p>
+				</div>
+			</div>
+		</main>
+
+		<section class="contenedor seccion">
+			<h1>Mas Sobre Nosotros</h1>
+			<div class="icono-nosotros">
+				<div class="iconos-apartado">
+					<img src="build/img/icono1.svg" alt="icono de seguridad" />
+					<h3>Seguridad</h3>
+					<p>
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Mollitia repudiandae id tempore ex non nulla, deserunt
+						perspiciatis ut magni nemo aliquam facere magnam quaerat,
+						voluptatibus obcaecati! Voluptatum nam veniam nihil.
+					</p>
+				</div>
+				<!-- 1 -->
+				<div class="iconos-apartado">
+					<img src="build/img/icono2.svg" alt="icono de economía" />
+					<h3>Economía</h3>
+					<p>
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Mollitia repudiandae id tempore ex non nulla, deserunt
+						perspiciatis ut magni nemo aliquam facere magnam quaerat,
+						voluptatibus obcaecati! Voluptatum nam veniam nihil.
+					</p>
+				</div>
+				<!-- 1 -->
+				<div class="iconos-apartado">
+					<img src="build/img/icono3.svg" alt="icono de tiempo" />
+					<h3>Tiempo</h3>
+					<p>
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+						Mollitia repudiandae id tempore ex non nulla, deserunt
+						perspiciatis ut magni nemo aliquam facere magnam quaerat,
+						voluptatibus obcaecati! Voluptatum nam veniam nihil.
+					</p>
+				</div>
+				<!-- 1 -->
+			</div>
+		</section>
+
+		<footer class="footer seccion">
+			<div class="contenedor contenedor-footer">
+				<nav class="navegacion">
+					<a href="nosotros.html">Nosotros</a>
+					<a href="anuncios.html">Anuncios</a>
+					<a href="blog.html">Blog</a>
+					<a href="contacto.html">Contacto</a>
+				</nav>
+			</div>
+			<p class="copyright">Todos los derechos Reservados 2022 &copy;</p>
+		</footer>
+		<script src="build/js/bundle.min.js"></script>
+	</body>
 </html>
