@@ -3,6 +3,7 @@
 // para el documento este cargado documento html, css y js
 document.addEventListener("DOMContentLoaded", function () {
 	eventListener();
+	darkMode();
 });
 
 function eventListener() {
@@ -33,4 +34,32 @@ function navegacionResponsive() {
 	// manera corta de hacer esto
 
 	navegacion.classList.toggle("mostrar");
+}
+
+function darkMode() {
+	const botonDarkMode = document.querySelector(".dark-mode-boton");
+	const sistemaDarkMode = window.matchMedia("(prefers-color-scheme: dark)");
+
+	if (sistemaDarkMode.matches) {
+		// anadir la clase dark-mode
+		document.body.classList.add("dark-mode");
+	} else {
+		// quitar la clase dark-mode
+		document.body.classList.remove("dark-mode");
+	}
+	// en esta parte lo que hace escuchara si el usuario cambia entre modos de luz y oscuro
+	sistemaDarkMode.addEventListener("change", function () {
+		if (sistemaDarkMode.matches) {
+			// anadir la clase dark-mode
+			document.body.classList.add("dark-mode");
+		} else {
+			// quitar la clase dark-mode
+			document.body.classList.remove("dark-mode");
+		}
+	});
+
+	botonDarkMode.addEventListener("click", function () {
+		// agregar clase dark-mode
+		document.body.classList.toggle("dark-mode");
+	});
 }
