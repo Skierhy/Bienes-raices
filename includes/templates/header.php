@@ -9,11 +9,14 @@
 	</head>
 
 	<body>
-		<header class="header">
+		<!-- operador ternario para saber si estamos en el index html -->
+		<!-- como las demas archivos php no tiene la variable usamos isset para saber si existe esa variable -->
+		<!-- no tener problemas en produccion IMPORTANTE -->
+		<header class="header <?php echo isset($inicio) ? 'inicio' : '' ?>">
 			<div class="contenedor contenido-header">
 				<div class="barra">
 					<!-- para referir a la pagina principal -->
-					<a href="/">
+					<a href="index.php">
 						<img
 							src="build/img/logo.svg"
 							alt="Logotipo de Bienes raíces"
@@ -29,10 +32,10 @@
 							class="dark-mode-boton"
 						/>
 						<nav class="navegacion mostrar">
-							<a href="nosotros.html">Nosotros</a>
-							<a href="anuncios.html">Anuncios</a>
-							<a href="blog.html">Blog</a>
-							<a href="contacto.html">Contacto</a>
+							<a href="nosotros.php">Nosotros</a>
+							<a href="anuncios.php">Anuncios</a>
+							<a href="blog.php">Blog</a>
+							<a href="contacto.php">Contacto</a>
 						</nav>
 					</div>
 				</div>
@@ -40,22 +43,3 @@
 			</div>
 			<!-- .contenedor contenido -->
 		</header>
-
-		<main class="contenedor seccion">
-			<h1>Titulo Pagina</h1>
-		</main>
-
-		<footer class="footer seccion">
-			<div class="contenedor contenedor-footer">
-				<nav class="navegacion">
-					<a href="nosotros.html">Nosotros</a>
-					<a href="anuncios.html">Anuncios</a>
-					<a href="blog.html">Blog</a>
-					<a href="contacto.html">Contacto</a>
-				</nav>
-			</div>
-			<p class="copyright">Todos los derechos Reservados 2022 &copy;</p>
-		</footer>
-		<script src="build/js/bundle.min.js"></script>
-	</body>
-</html>
