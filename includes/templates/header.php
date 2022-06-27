@@ -11,6 +11,7 @@
 	<body>
 		<!-- operador ternario para saber si estamos en el index html -->
 		<!-- como las demas archivos php no tiene la variable usamos isset para saber si existe esa variable -->
+		<!-- no tener problemas en produccion IMPORTANTE -->
 		<header class="header <?php echo isset($inicio) ? 'inicio' : '' ?>">
 			<div class="contenedor contenido-header">
 				<div class="barra">
