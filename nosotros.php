@@ -1,5 +1,7 @@
 <?php
-	include 'includes/templates/header.php';
+	// sirve para codigo mas importante de la aplicacion
+	require 'includes/funciones.php';
+	incluir_Template('header');
 ?>
 <main class="contenedor seccion">
 			<h1>Conoce Sobre Nosotros</h1>
@@ -74,5 +76,5 @@
 		</section>
 
 <?php
-	include 'includes/templates/footer.php';
+	incluir_Template('footer');
 ?>
