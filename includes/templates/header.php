@@ -5,29 +5,32 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Bienes raíces</title>
-		<link rel="stylesheet" href="build/css/app.css" />
+		<!-- la / sirve para que en la raiz de la carpeta main hay una carpeta que se llama build -->
+		<!-- en de usar ../ -->
+		<link rel="stylesheet" href="/build/css/app.css" />
 	</head>
 
 	<body>
 		<!-- operador ternario para saber si estamos en el index html -->
 		<!-- como las demas archivos php no tiene la variable usamos isset para saber si existe esa variable -->
 		<!-- no tener problemas en produccion IMPORTANTE -->
-		<header class="header <?php echo isset($inicio) ? 'inicio' : '' ?>">
+		<!-- ahorita ya no es necesario por que funciones.php esta por defecto el parametro -->
+		<header class="header <?php echo $inicio ? 'inicio' : '' ?>">
 			<div class="contenedor contenido-header">
 				<div class="barra">
 					<!-- para referir a la pagina principal -->
 					<a href="index.php">
 						<img
-							src="build/img/logo.svg"
+							src="/build/img/logo.svg"
 							alt="Logotipo de Bienes raíces"
 						/>
 					</a>
 					<div class="mobile-menu">
-						<img src="build/img/barras.svg" alt="icon menu responsive" />
+						<img src="/build/img/barras.svg" alt="icon menu responsive" />
 					</div>
 					<div class="derecha">
 						<img
-							src="build/img/dark-mode.svg"
+							src="/build/img/dark-mode.svg"
 							alt="dark mode"
 							class="dark-mode-boton"
 						/>

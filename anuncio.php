@@ -1,5 +1,7 @@
 <?php
-	include 'includes/templates/header.php';
+	// sirve para codigo mas importante de la aplicacion
+	require 'includes/funciones.php';
+	incluir_Template('header');
 ?>
 <main class="contenedor seccion contenido-centrado">
 			<h1>Casa en venta frente al bosque</h1>
@@ -60,5 +62,5 @@
 			</div>
 		</main>
 <?php
-	include 'includes/templates/footer.php';
+	incluir_Template('footer');
 ?>
