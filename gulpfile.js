@@ -65,11 +65,11 @@ function watchArchivos() {
 exports.css = css;
 exports.watchArchivos = watchArchivos;
 // todo
-exports.default = parallel(
-	css,
-	javascript,
-	imagenes,
-	versionWebp,
-	watchArchivos
-);
-// exports.default = parallel(css, watchArchivos);
+// exports.default = parallel(
+// 	css,
+// 	javascript,
+// 	imagenes,
+// 	versionWebp,
+// 	watchArchivos
+// );
+exports.default = parallel(css, javascript, watchArchivos);

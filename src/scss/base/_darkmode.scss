@@ -39,6 +39,9 @@
 	blockquote {
 		color: darken(v.$blanco, 10);
 	}
+	.boton-rojo-block {
+		background-color: darken(v.$rojo, 5);
+	}
 
 	.formulario {
 		label,
@@ -53,6 +56,24 @@
 			background-color: darken(v.$grisOscuro, 5);
 			border: 1px solid darken(v.$grisOscuro, 10);
 			color: darken(v.$blanco, 10);
+		}
+	}
+
+	.alerta {
+		&.error {
+			background-color: darken(v.$rojo, 10);
+		}
+
+		&.exito {
+			background-color: darken(v.$verde, 10);
+			color: darken(v.$blanco, 10);
+		}
+	}
+
+	table.propiedades {
+		color: darken(v.$blanco, 2);
+		thead {
+			background-color: darken(v.$verde, 10);
 		}
 	}
 }
