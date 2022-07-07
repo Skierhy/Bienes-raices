@@ -2,16 +2,26 @@
 @use "base/mixins" as m;
 
 .boton-amarillo {
-  // toma todo el espacio disponible
-  @include m.boton(v.$amarillo, inline-block);
+	// toma todo el espacio disponible
+	@include m.boton(v.$amarillo, inline-block);
 }
 
 .boton-amarillo-block {
-  // toma todo el espacio disponible
-  @include m.boton(v.$amarillo, block);
+	// toma todo el espacio disponible
+	@include m.boton(v.$amarillo, block);
 }
 
 .boton-verde {
-  // toma todo el espacio disponible
-  @include m.boton(v.$verde, inline-block);
+	// toma todo el espacio disponible
+	@include m.boton(v.$verde, inline-block);
+}
+
+.boton-rojo-block {
+	// toma todo el espacio disponible
+	@include m.boton(v.$rojo, block);
+}
+
+.boton-verde-block {
+	// toma todo el espacio disponible
+	@include m.boton(v.$verde, block);
 }
