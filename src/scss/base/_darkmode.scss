@@ -76,4 +76,15 @@
 			background-color: darken(v.$verde, 10);
 		}
 	}
+
+	.darkmode-imagenActualizar {
+		// fondo grisclaro
+		// del div
+		.imagen-chica-actualizar {
+			// fondo grisclaro
+			// del div
+			background-color: v.$grisClaro;
+			border-radius: 1rem;
+		}
+	}
 }
