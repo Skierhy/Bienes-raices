@@ -11,12 +11,27 @@
 	background-color: lighten(v.$gris, 5);
 	border: 1px solid lighten(v.$gris, 10);
 	margin-bottom: 2rem;
+
 	.contenido-anuncio {
 		padding: 2rem;
 	}
 	h3,
 	p {
 		margin: 0;
+	}
+	.parrafo-relleno {
+		// -webkit-box sirve para que el texto se rellene en todo el espacio disponible
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+	}
+	@include m.tablet {
+		.imagen-relleno {
+			// min-width: 100%;
+			max-height: 18rem;
+			object-fit: cover;
+		}
 	}
 }
 

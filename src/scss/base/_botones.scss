@@ -19,6 +19,8 @@
 .boton-rojo-block {
 	// toma todo el espacio disponible
 	@include m.boton(v.$rojo, block);
+	width: 100%;
+	height: 100%;
 }
 
 .boton-verde-block {

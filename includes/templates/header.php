@@ -1,3 +1,27 @@
+<?php
+// necesita inicializar la super global
+// $_SESSION
+// session_start();
+
+// para que no iniciemos dos veces de la sesion
+if (!isset($_SESSION)) {
+	session_start();
+}
+// echo '<pre>';
+// var_dump($_SESSION);
+// echo '</pre>';
+
+// es como un if else
+// $auth = $_SESSION['login'] ?? null;
+// if ($auth) {
+// $_SESSION['login'] = true;
+// } else {
+// si no existe si le asgina a auth null
+// }
+$auth = $_SESSION['login'] ?? false;
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -33,10 +57,23 @@
 						<a href="anuncios.php">Anuncios</a>
 						<a href="blog.php">Blog</a>
 						<a href="contacto.php">Contacto</a>
+						<?php
+						if ($auth) : ?>
+							<a href="cerrar-sesion.php">Cerrar sesión</a>
+						<?php else :
+						?>
+							<a href="/login.php">Iniciar sesión</a>
+						<?php endif; ?>
 					</nav>
 				</div>
 			</div>
 			<!-- .barra -->
+
+			<?php
+			if ($inicio) {
+				echo "<h1>Venta de Casas y Departamentos Exclusivos</h1>";
+			}
+			?>
 		</div>
 		<!-- .contenedor contenido -->
 	</header>
