@@ -1,4 +1,34 @@
 <?php
+// session_start();
+// // se muestra el paso de informacion en la super global _SESSION
+
+// // echo '<pre>';
+// // var_dump($_SESSION);
+// // echo '</pre>';
+
+// $auth = $_SESSION['login'];
+
+// // saber si el usuario esta autenticado
+// if (!$auth) {
+// 	// no esta autenticado
+// 	// redireccionar al login
+// 	header('Location: /');
+// }
+
+// manera mas corta de redireccionar
+require "../includes/funciones.php";
+
+$auth = estaAutenticado();
+
+// saber si el usuario esta autenticado
+if (!$auth) {
+	// no esta autenticado
+	// redireccionar al login
+	header('Location: /');
+}
+
+
+
 // mostrar listado de propiedades:
 // importar la conexion
 // base de datos
@@ -28,7 +58,28 @@ $resultadoConsulta = mysqli_query($db, $query);
 // isset($_GET['id'])
 // $id = $_GET["id"] ?? null;
 $resultado = $_GET["resultado"] ?? null;
-require '../includes/funciones.php';
+
+// No se pone aqui por que no va existir una variable con el id
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	$id = $_POST['id'];
+	$id = filter_var($id, FILTER_VALIDATE_INT);
+
+	if ($id) {
+		// eliminar archivo de la base de datos
+		$query = "SELECT imagen FROM propiedades WHERE id = $id";
+		$resultado = mysqli_query($db, $query);
+		$propiedad = mysqli_fetch_assoc($resultado);
+		// var_dump($propiedad['imagen']);
+		unlink('../imagenes/' . $propiedad['imagen']);
+		// eliminar propiedad
+		$query = "DELETE FROM propiedades WHERE id = ${id}";
+		$resultado = mysqli_query($db, $query);
+
+		if ($resultado) {
+			header("Location: /admin?resultado=3");
+		}
+	}
+}
 incluir_Template('header');
 ?>
 
@@ -42,6 +93,10 @@ incluir_Template('header');
 	elseif ($resultado == 2) :
 	?>
 		<p class="alerta exito">Anuncio Actualizado</p>
+	<?php
+	elseif ($resultado == 3) :
+	?>
+		<p class="alerta exito">Anuncio Eliminado</p>
 	<?php
 	endif;
 	?>
@@ -84,7 +139,12 @@ incluir_Template('header');
 						?>
 					</th>
 					<th>
-						<a href="#" class="boton-rojo-block">Eliminar</a>
+						<form method="POST" class="w-100">
+							<!-- input hiden
+							para enviar el id de la propiedad -->
+							<input type="hidden" name="id" value="<?php echo $propiedad['id'] ?>">
+							<input type="submit" class="boton-rojo-block" value="Eliminar">
+						</form>
 						<a href="/admin/propiedades/actualizar.php?id=<?php echo $propiedad['id'] ?>" class="boton-amarillo-block">
 							Actualizar
 						</a>

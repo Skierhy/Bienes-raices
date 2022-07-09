@@ -1,4 +1,14 @@
 <?php
+require "../../includes/funciones.php";
+
+$auth = estaAutenticado();
+
+// saber si el usuario esta autenticado
+if (!$auth) {
+	// no esta autenticado
+	// redireccionar al login
+	header('Location: /');
+}
 
 // VALIDAR ID VALIDO
 $id = $_GET["id"];
@@ -223,8 +233,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		}
 	}
 }
-
-require "../../includes/funciones.php";
 incluir_Template("header");
 ?>
 <main class="contenedor seccion">
