@@ -1,6 +1,7 @@
 <?php
 // importa base de datos
-require 'includes/config/database.php';
+// require 'includes/config/database.php';
+require 'includes/app.php';
 $db = conectarBD();
 
 $errores = [];
@@ -77,7 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 // incluye el header
 // sirve para codigo mas importante de la aplicacion
-require 'includes/funciones.php';
 incluir_Template('header');
 ?>
 

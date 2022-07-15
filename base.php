@@ -1,12 +1,12 @@
 <?php
-	// sirve para codigo mas importante de la aplicacion
-	require 'includes/funciones.php';
-	incluir_Template('header');
+// sirve para codigo mas importante de la aplicacion
+require 'includes/app.php';
+incluir_Template('header');
 ?>
 
-		<main class="contenedor seccion">
-			<h1>Titulo Pagina</h1>
-		</main>
+<main class="contenedor seccion">
+	<h1>Titulo Pagina</h1>
+</main>
 <?php
-	incluir_Template('footer');
+incluir_Template('footer');
 ?>

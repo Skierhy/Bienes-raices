@@ -1,7 +1,6 @@
 <?php
 // importar la conexion de base de datos
 // debe que se la ubicacion de index
-require 'includes/config/database.php';
 $db = conectarBD();
 
 

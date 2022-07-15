@@ -1,5 +1,5 @@
 <?php
-require 'includes/config/database.php';
+require 'includes/app.php';
 $db = conectarBD();
 $id = $_GET['id'];
 $id = filter_var($id, FILTER_VALIDATE_INT);
@@ -9,7 +9,6 @@ $id = filter_var($id, FILTER_VALIDATE_INT);
 if (!$id) {
 	header('Location: /');
 }
-
 $query = "SELECT * FROM propiedades WHERE id = ${id}";
 $resultado = mysqli_query($db, $query);
 
@@ -21,7 +20,6 @@ $propiedades = mysqli_fetch_array($resultado);
 
 // consular la base de datos
 // sirve para codigo mas importante de la aplicacion
-require 'includes/funciones.php';
 incluir_Template('header');
 ?>
 <main class="contenedor seccion contenido-centrado">

@@ -1,0 +1,17 @@
+{
+	"name": "reach/bienesraices_inicio",
+	"description": "Creando proyecto de bienes raices en POO",
+	"type": "project",
+	"autoload": {
+		"psr-4": {
+			"App\\": "./class"
+		}
+	},
+	"authors": [
+		{
+			"name": "Skierhy",
+			"email": "Skierhy@gmail.com"
+		}
+	],
+	"require": {}
+}

@@ -1,6 +1,6 @@
 <?php
 // sirve para codigo mas importante de la aplicacion
-require 'includes/funciones.php';
+require 'includes/app.php';
 incluir_Template('header');
 ?>
 <main class="contenedor seccion">
