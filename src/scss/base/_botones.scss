@@ -1,0 +1,29 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.boton-amarillo {
+	// toma todo el espacio disponible
+	@include m.boton(v.$amarillo, inline-block);
+}
+
+.boton-amarillo-block {
+	// toma todo el espacio disponible
+	@include m.boton(v.$amarillo, block);
+}
+
+.boton-verde {
+	// toma todo el espacio disponible
+	@include m.boton(v.$verde, inline-block);
+}
+
+.boton-rojo-block {
+	// toma todo el espacio disponible
+	@include m.boton(v.$rojo, block);
+	width: 100%;
+	height: 100%;
+}
+
+.boton-verde-block {
+	// toma todo el espacio disponible
+	@include m.boton(v.$verde, block);
+}

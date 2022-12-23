@@ -1,0 +1,90 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.dark-mode {
+	background-color: darken(v.$grisOscuro, 10);
+	p {
+		color: darken(v.$blanco, 30);
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: darken(v.$blanco, 5);
+	}
+	.anuncio {
+		background-color: darken(v.$grisOscuro, 5);
+		border: 1px solid darken(v.$grisOscuro, 10);
+		.precio {
+			color: darken(v.$verde, 10);
+		}
+	}
+
+	.iconos-caracteristicas {
+		filter: invert(50%);
+	}
+
+	.testimonial {
+		background-color: darken(v.$verde, 10);
+	}
+
+	.boton-amarillo-block {
+		background-color: darken(v.$amarillo, 5);
+	}
+
+	.boton-verde {
+		background-color: darken(v.$verde, 10);
+	}
+	blockquote {
+		color: darken(v.$blanco, 10);
+	}
+	.boton-rojo-block {
+		background-color: darken(v.$rojo, 5);
+	}
+
+	.formulario {
+		label,
+		legend,
+		p {
+			color: darken(v.$blanco, 10);
+		}
+
+		input:not([type="submit"]),
+		textarea,
+		select {
+			background-color: darken(v.$grisOscuro, 5);
+			border: 1px solid darken(v.$grisOscuro, 10);
+			color: darken(v.$blanco, 10);
+		}
+	}
+
+	.alerta {
+		&.error {
+			background-color: darken(v.$rojo, 10);
+		}
+
+		&.exito {
+			background-color: darken(v.$verde, 10);
+			color: darken(v.$blanco, 10);
+		}
+	}
+
+	table.propiedades {
+		color: darken(v.$blanco, 2);
+		thead {
+			background-color: darken(v.$verde, 10);
+		}
+	}
+
+	.darkmode-imagenActualizar {
+		// fondo grisclaro
+		// del div
+		.imagen-chica-actualizar {
+			// fondo grisclaro
+			// del div
+			background-color: v.$grisClaro;
+			border-radius: 1rem;
+		}
+	}
+}

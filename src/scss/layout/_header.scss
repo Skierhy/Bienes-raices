@@ -1,0 +1,50 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+// no se necesita exporta variables
+// no soporta webp
+.no-webp .inicio {
+  background-image: url(../img/header.jpg);
+}
+
+// soporta webp
+
+.webp .inicio {
+  background-image: url(../img/header.webp);
+}
+
+.header {
+  background-color: v.$grisOscuro;
+
+  // este es como if hace referencia a si mismo
+
+  &.inicio {
+    background-position: center center;
+    // ocupe todo
+    background-size: cover;
+    @include m.tablet {
+      min-height: 70rem;
+    }
+    // para que ocupe este tamano como minimo
+    .contenido-header {
+      @include m.tablet {
+        min-height: 70rem;
+      }
+    }
+  }
+}
+
+// se debe que usar desde padre
+.contenido-header {
+  display: flex;
+  // cambiar a columnas
+  flex-direction: column;
+  justify-content: space-between;
+  h1 {
+    text-align: left;
+    color: v.$blanco;
+    font-weight: v.$bold;
+    line-height: 2;
+    // como salto de linea
+    max-width: 60rem;
+  }
+}

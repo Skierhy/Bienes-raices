@@ -1,0 +1,103 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.derecha {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include m.tablet {
+		// alinear a la derecha el dark mode
+		align-items: flex-end;
+	}
+
+	.dark-mode-boton {
+		width: 3rem;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+		// cambiar el svg de color
+		// invertir el color
+		filter: invert(100%);
+		&:hover {
+			cursor: pointer;
+		}
+
+		@include m.tablet {
+			margin-top: 0;
+		}
+	}
+}
+
+.barra {
+	display: flex;
+	flex-direction: column;
+	// alignear logo
+	align-items: center;
+	padding: 3rem 0 3rem 0;
+	@include m.tablet {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+}
+
+.navegacion {
+	// para animar display no se puede
+	// pero se puede usar visibility hidden
+	visibility: hidden;
+	// para mostrar se usa
+	// visibility: visible;
+	// mejorar la transicion se usa opacity
+	opacity: 0;
+	// para transiciones se usa
+	// transition
+	// primero la propiedad luego, el tiempo y luego el tipo
+	height: 0;
+	transition: visibility 0.3s ease-in-out, opacity 0.5s linear,
+		height 0.5s linear;
+	@include m.tablet {
+		display: flex;
+		align-items: center;
+		visibility: visible;
+		opacity: 1;
+	}
+	a {
+		color: v.$blanco;
+		text-decoration: none;
+		font-size: 1.8rem;
+		// ocupe todo la linea
+		display: block;
+		text-align: center;
+		@include m.tablet {
+			margin-right: 2rem;
+			//   eliminar el margen del ultimo elemento
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+// menu de burgesa
+.mobile-menu {
+	@include m.tablet {
+		display: none;
+	}
+
+	img {
+		width: 5rem;
+	}
+}
+
+.mostrar {
+	// display: flex;
+	// flex-direction: column;
+
+	// @include m.tablet {
+	// 	flex-direction: row;
+	// }
+	// tambien se usa visibility
+	visibility: visible;
+	// opacity: 1;
+	opacity: 1;
+	height: auto;
+}

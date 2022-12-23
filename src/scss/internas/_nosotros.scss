@@ -1,0 +1,29 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.nosotros {
+	@include m.tablet {
+		@include m.grid(2, 2rem);
+	}
+	blockquote {
+		font-size: 2rem;
+		font-weight: v.$black;
+		margin: 3rem 0 0 0;
+		padding: 1rem 0 3rem 0;
+	}
+}
+
+.icono-nosotros {
+	@include m.tablet {
+		@include m.grid(3, 2rem);
+	}
+	img {
+		height: 10rem;
+	}
+	h3 {
+		text-transform: uppercase;
+	}
+	P {
+		text-align: center;
+	}
+}
